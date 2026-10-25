@@ -1,0 +1,11 @@
+{
+  "app_id": "cli_xxxxxxxxxxxxxxxx",
+  "app_secret": "在飞书开放平台自建应用里拿",
+  "workspace": "/path/to/your/workspace",
+  "codex_bin": "codex",
+  "codex_flags": ["--sandbox", "workspace-write"],
+  "timeout_sec": 600,
+  "allowed_open_ids": [],
+  "default_model": null,
+  "reply_header": false
+}

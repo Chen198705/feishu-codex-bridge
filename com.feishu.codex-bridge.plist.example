@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.feishu.codex-bridge</string>
+  <key>ProgramArguments</key><array>
+    <string>/path/to/feishu-codex-bridge/.venv/bin/python</string>
+    <string>/path/to/feishu-codex-bridge/bridge.py</string>
+  </array>
+  <key>WorkingDirectory</key><string>/path/to/feishu-codex-bridge</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+  <key>StandardOutPath</key><string>/path/to/feishu-codex-bridge/bridge.log</string>
+  <key>StandardErrorPath</key><string>/path/to/feishu-codex-bridge/bridge.log</string>
+  <key>EnvironmentVariables</key><dict>
+    <key>PATH</key><string>/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+  </dict>
+</dict></plist>

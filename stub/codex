@@ -1,0 +1,15 @@
+#!/bin/bash
+# 假 codex：验证 bridge 的 exec/resume 命令行拼装与 JSONL 解析
+{ echo "ARGS: $*"; } >&2
+safe() { printf '%s' "$1" | tr -d '"\\' | head -c 60; }
+LAST="${@: -1}"
+case "$*" in
+  *resume*)
+    echo '{"type":"thread.started","thread_id":"sess-resumed-2"}'
+    printf '{"type":"item.completed","item":{"type":"agent_message","message":"（stub）续会话答复 ok，prompt=%s"}}\n' "$(safe "$LAST")"
+    ;;
+  *)
+    echo '{"type":"thread.started","thread_id":"sess-stub-1"}'
+    printf '{"type":"item.completed","item":{"type":"agent_message","message":"（stub）假 Codex 回复 ok，prompt=%s"}}\n' "$(safe "$LAST")"
+    ;;
+esac
