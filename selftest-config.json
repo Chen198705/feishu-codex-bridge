@@ -2,6 +2,6 @@
   "app_id": "stub",
   "app_secret": "***",
   "workspace": "/tmp",
-  "codex_bin": "/path/to/feishu-codex-bridge/stub/codex",
+  "codex_bin": "./stub/codex",
   "timeout_sec": 30
 }
